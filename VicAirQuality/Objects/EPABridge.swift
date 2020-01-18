@@ -52,45 +52,10 @@ final class EPABridge {
     }
 }
 
-
-//public class EPASitesFetcher: ObservableObject {
-//
-//    @Published var allAirMonitoringSites: AirMonitoringSites = AirMonitoringSites(sites: Set<SimpleAirMonitoringSite>())
-//
-//    init() {
-//        fetchAllMonitoringSites()
-//    }
-//
-//    func fetchAllMonitoringSites() {
-//        let urlString = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites?environmentalSegment=air"
-//
-//        guard let url = URL(string: urlString) else { return }
-//
-//        var request = URLRequest(url: url)
-//        request = addNecessaryHeaders(request: request)
-//
-//        URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard let data = data else { return }
-//
-//            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-//                guard let allMonitoringSites = AirMonitoringSites(json: json) else {
-//                    return
-//                }
-//
-//                DispatchQueue.main.async {
-//                    self.allAirMonitoringSites = allMonitoringSites
-//                }
-//            }
-//
-//        }.resume()
-//    }
-//}
-
-
 public class CurrentSiteFetcher: ObservableObject {
     @Published var currentSite: DetailedAirMonitoringSite?
     
-    var lastLocalUpdate: Int = UserDefaults.lastUpdate
+    var lastLocalUpdate: Double = UserDefaults.lastUpdate
     var localCurrentID: String = UserDefaults.defaultSiteID
     
     var timer = Timer()
@@ -109,7 +74,11 @@ public class CurrentSiteFetcher: ObservableObject {
             
             return
         }
-        else if (lastLocalUpdate <= 0 || lastLocalUpdate < UserDefaults.lastUpdate) {
+        
+        // Check every 40 Minutes for an update
+        let nextUpdate = Date(timeIntervalSince1970: lastLocalUpdate).addingTimeInterval(40 * 60.0)
+        
+        if (lastLocalUpdate <= 0.0 || nextUpdate <= Date() ) {
             fetchCurrentSite()
             
             return
@@ -117,6 +86,12 @@ public class CurrentSiteFetcher: ObservableObject {
     }
     
     func fetchCurrentSite() {
+        print("Fetching update")
+        print(Date())
+        
+        UserDefaults.set(lastUpdate: Date().timeIntervalSince1970)
+        lastLocalUpdate = UserDefaults.lastUpdate
+        
         let currentID = UserDefaults.defaultSiteID
         
         let urlString = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites/\(currentID)/parameters"

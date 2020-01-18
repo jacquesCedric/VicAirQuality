@@ -24,6 +24,7 @@
 		C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */; };
 		C4EFFCD423D2936400846010 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD323D2936400846010 /* MapView.swift */; };
 		C4EFFCD723D2958B00846010 /* SiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD623D2958B00846010 /* SiteView.swift */; };
+		C4EFFCD923D298F500846010 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD823D298F500846010 /* MapButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
 		C4EFFCD323D2936400846010 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C4EFFCD623D2958B00846010 /* SiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteView.swift; sourceTree = "<group>"; };
+		C4EFFCD823D298F500846010 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				C4EFFCD323D2936400846010 /* MapView.swift */,
 				C4EFFCD623D2958B00846010 /* SiteView.swift */,
+				C4EFFCD823D298F500846010 /* MapButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				C4EFFCC823D27D5000846010 /* SimpleAirMonitoringSite.swift in Sources */,
 				C4EFFCC923D27D5000846010 /* Coordinates.swift in Sources */,
 				C4EFFCC623D27D5000846010 /* Quality.swift in Sources */,
+				C4EFFCD923D298F500846010 /* MapButton.swift in Sources */,
 				C4EFFCD423D2936400846010 /* MapView.swift in Sources */,
 				C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */,
 				C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */,
