@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SiteView: View {
     @ObservedObject var siteFetcher = CurrentSiteFetcher()
-//    @ObservedObject var allSites = EPASitesFetcher()
+
     var allSites = EPABridge()
     
     @State var pins: [MapPin] = []
@@ -18,10 +18,22 @@ struct SiteView: View {
     
     var body: some View {
         VStack {
-            Text("\(siteFetcher.currentSite?.siteName ?? "Site Data Unavailable")")
-                .padding()
+            HStack {
+                Text("\(siteFetcher.currentSite?.siteName ?? "Site Data Unavailable")")
+                    .font(.title)
+                    .padding()
+                
+                Spacer()
+                
+                MapButton(pins: $pins, selectedPin: $selectedPin)
+                    .padding()
+            }
             
-            MapView(pins: $pins, selectedPin: $selectedPin)
+            Spacer()
+            
+            siteFetcher.currentSite.map{ SiteDetails(site: $0) }
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
