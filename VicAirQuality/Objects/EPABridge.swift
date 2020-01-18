@@ -86,9 +86,6 @@ public class CurrentSiteFetcher: ObservableObject {
     }
     
     func fetchCurrentSite() {
-        print("Fetching update")
-        print(Date())
-        
         UserDefaults.set(lastUpdate: Date().timeIntervalSince1970)
         lastLocalUpdate = UserDefaults.lastUpdate
         
