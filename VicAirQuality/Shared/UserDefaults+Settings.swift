@@ -38,17 +38,17 @@ extension UserDefaults {
 
 
 extension UserDefaults {
-    class var lastUpdate: Int {
+    class var lastUpdate: Double {
         let userDefaults = UserDefaults.standard
         
         if userDefaults.object(forKey: UserDefaults.Keys.lastUpdate) == nil {
             UserDefaults.set(lastUpdate: 0)
         }
         
-        return userDefaults.integer(forKey: UserDefaults.Keys.lastUpdate)
+        return userDefaults.double(forKey: UserDefaults.Keys.lastUpdate)
     }
     
-    class func set(lastUpdate: Int) {
+    class func set(lastUpdate: Double) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(lastUpdate, forKey: UserDefaults.Keys.lastUpdate)
     }
