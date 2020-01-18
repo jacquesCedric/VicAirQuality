@@ -12,6 +12,18 @@
 		C4EFFCAC23D2760300846010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EFFCAB23D2760300846010 /* Assets.xcassets */; };
 		C4EFFCAF23D2760300846010 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EFFCAE23D2760300846010 /* Preview Assets.xcassets */; };
 		C4EFFCB223D2760300846010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EFFCB023D2760300846010 /* Main.storyboard */; };
+		C4EFFCC523D27D5000846010 /* MonitoringSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCBE23D27D5000846010 /* MonitoringSite.swift */; };
+		C4EFFCC623D27D5000846010 /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCBF23D27D5000846010 /* Quality.swift */; };
+		C4EFFCC723D27D5000846010 /* DetailedAirMonitoringSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCC023D27D5000846010 /* DetailedAirMonitoringSite.swift */; };
+		C4EFFCC823D27D5000846010 /* SimpleAirMonitoringSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCC123D27D5000846010 /* SimpleAirMonitoringSite.swift */; };
+		C4EFFCC923D27D5000846010 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCC223D27D5000846010 /* Coordinates.swift */; };
+		C4EFFCCA23D27D5000846010 /* AirMonitoringSites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCC323D27D5000846010 /* AirMonitoringSites.swift */; };
+		C4EFFCCB23D27D5000846010 /* HealthVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCC423D27D5000846010 /* HealthVector.swift */; };
+		C4EFFCCE23D27D8800846010 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCCD23D27D8800846010 /* MapPin.swift */; };
+		C4EFFCD023D27DF100846010 /* EPABridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCCF23D27DF100846010 /* EPABridge.swift */; };
+		C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */; };
+		C4EFFCD423D2936400846010 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD323D2936400846010 /* MapView.swift */; };
+		C4EFFCD723D2958B00846010 /* SiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD623D2958B00846010 /* SiteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +35,18 @@
 		C4EFFCB123D2760300846010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4EFFCB323D2760300846010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4EFFCB423D2760300846010 /* VicAirQuality.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VicAirQuality.entitlements; sourceTree = "<group>"; };
+		C4EFFCBE23D27D5000846010 /* MonitoringSite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitoringSite.swift; sourceTree = "<group>"; };
+		C4EFFCBF23D27D5000846010 /* Quality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
+		C4EFFCC023D27D5000846010 /* DetailedAirMonitoringSite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedAirMonitoringSite.swift; sourceTree = "<group>"; };
+		C4EFFCC123D27D5000846010 /* SimpleAirMonitoringSite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAirMonitoringSite.swift; sourceTree = "<group>"; };
+		C4EFFCC223D27D5000846010 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		C4EFFCC323D27D5000846010 /* AirMonitoringSites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirMonitoringSites.swift; sourceTree = "<group>"; };
+		C4EFFCC423D27D5000846010 /* HealthVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthVector.swift; sourceTree = "<group>"; };
+		C4EFFCCD23D27D8800846010 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		C4EFFCCF23D27DF100846010 /* EPABridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPABridge.swift; sourceTree = "<group>"; };
+		C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
+		C4EFFCD323D2936400846010 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C4EFFCD623D2958B00846010 /* SiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +79,10 @@
 		C4EFFCA623D275FF00846010 /* VicAirQuality */ = {
 			isa = PBXGroup;
 			children = (
+				C4EFFCD523D2957200846010 /* Shared */,
+				C4EFFCCC23D27D7600846010 /* Objects */,
+				C4EFFCBB23D276D600846010 /* Views */,
+				C4EFFCBA23D276CD00846010 /* Models */,
 				C4EFFCA723D275FF00846010 /* AppDelegate.swift */,
 				C4EFFCA923D275FF00846010 /* ContentView.swift */,
 				C4EFFCAB23D2760300846010 /* Assets.xcassets */,
@@ -72,6 +100,46 @@
 				C4EFFCAE23D2760300846010 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4EFFCBA23D276CD00846010 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFFCC323D27D5000846010 /* AirMonitoringSites.swift */,
+				C4EFFCC223D27D5000846010 /* Coordinates.swift */,
+				C4EFFCC023D27D5000846010 /* DetailedAirMonitoringSite.swift */,
+				C4EFFCC423D27D5000846010 /* HealthVector.swift */,
+				C4EFFCBE23D27D5000846010 /* MonitoringSite.swift */,
+				C4EFFCBF23D27D5000846010 /* Quality.swift */,
+				C4EFFCC123D27D5000846010 /* SimpleAirMonitoringSite.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4EFFCBB23D276D600846010 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFFCD323D2936400846010 /* MapView.swift */,
+				C4EFFCD623D2958B00846010 /* SiteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4EFFCCC23D27D7600846010 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFFCCD23D27D8800846010 /* MapPin.swift */,
+				C4EFFCCF23D27DF100846010 /* EPABridge.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		C4EFFCD523D2957200846010 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EFFCC523D27D5000846010 /* MonitoringSite.swift in Sources */,
+				C4EFFCC823D27D5000846010 /* SimpleAirMonitoringSite.swift in Sources */,
+				C4EFFCC923D27D5000846010 /* Coordinates.swift in Sources */,
+				C4EFFCC623D27D5000846010 /* Quality.swift in Sources */,
+				C4EFFCD423D2936400846010 /* MapView.swift in Sources */,
 				C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */,
+				C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */,
+				C4EFFCCA23D27D5000846010 /* AirMonitoringSites.swift in Sources */,
+				C4EFFCCE23D27D8800846010 /* MapPin.swift in Sources */,
+				C4EFFCD723D2958B00846010 /* SiteView.swift in Sources */,
+				C4EFFCD023D27DF100846010 /* EPABridge.swift in Sources */,
+				C4EFFCCB23D27D5000846010 /* HealthVector.swift in Sources */,
 				C4EFFCA823D275FF00846010 /* AppDelegate.swift in Sources */,
+				C4EFFCC723D27D5000846010 /* DetailedAirMonitoringSite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
