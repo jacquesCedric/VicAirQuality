@@ -22,8 +22,13 @@ struct MapButton: View {
                 Image(nsImage: NSImage(named: NSImage.touchBarExitFullScreenTemplateName)!)
                     .rotationEffect(Angle(degrees: 90.0))
             }
-            .scaleEffect(0.8)
+            .scaleEffect(0.85)
         }
+        .buttonStyle(PlainButtonStyle())
+        .frame(width: 30, height: 30)
+        .background(Color.blue)
+        .foregroundColor(Color.white)
+        .cornerRadius(15)
         .popover(
             isPresented: self.$showMap,
             arrowEdge: .bottom

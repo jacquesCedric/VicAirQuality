@@ -25,6 +25,7 @@
 		C4EFFCD423D2936400846010 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD323D2936400846010 /* MapView.swift */; };
 		C4EFFCD723D2958B00846010 /* SiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD623D2958B00846010 /* SiteView.swift */; };
 		C4EFFCD923D298F500846010 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCD823D298F500846010 /* MapButton.swift */; };
+		C4EFFCDB23D2A37000846010 /* SiteDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCDA23D2A37000846010 /* SiteDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C4EFFCD323D2936400846010 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C4EFFCD623D2958B00846010 /* SiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteView.swift; sourceTree = "<group>"; };
 		C4EFFCD823D298F500846010 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
+		C4EFFCDA23D2A37000846010 /* SiteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +123,10 @@
 		C4EFFCBB23D276D600846010 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4EFFCDC23D2A38800846010 /* Fragments */,
 				C4EFFCD323D2936400846010 /* MapView.swift */,
 				C4EFFCD623D2958B00846010 /* SiteView.swift */,
-				C4EFFCD823D298F500846010 /* MapButton.swift */,
+				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 				C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		C4EFFCDC23D2A38800846010 /* Fragments */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFFCD823D298F500846010 /* MapButton.swift */,
+			);
+			path = Fragments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				C4EFFCD923D298F500846010 /* MapButton.swift in Sources */,
 				C4EFFCD423D2936400846010 /* MapView.swift in Sources */,
 				C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */,
+				C4EFFCDB23D2A37000846010 /* SiteDetails.swift in Sources */,
 				C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */,
 				C4EFFCCA23D27D5000846010 /* AirMonitoringSites.swift in Sources */,
 				C4EFFCCE23D27D8800846010 /* MapPin.swift in Sources */,
