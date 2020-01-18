@@ -73,6 +73,23 @@ extension Quality {
             return NSColor(calibratedHue: 80, saturation: 3, brightness: 30, alpha: 1.0)
         }
     }
+    
+    func asProgress() -> Double {
+        switch(grade) {
+        case .unknown:
+            return 1.0
+        case .good:
+            return 1.0
+        case .moderate:
+            return 0.75
+        case .poor:
+            return 0.55
+        case .verypoor:
+            return 0.4
+        case .hazardous:
+            return 0.25
+        }
+    }
 }
 
 

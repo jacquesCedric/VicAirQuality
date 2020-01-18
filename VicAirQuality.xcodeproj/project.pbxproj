@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417DFDA23D2BB230030F5BD /* ProgressBar.swift */; };
 		C4EFFCA823D275FF00846010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCA723D275FF00846010 /* AppDelegate.swift */; };
 		C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCA923D275FF00846010 /* ContentView.swift */; };
 		C4EFFCAC23D2760300846010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EFFCAB23D2760300846010 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C417DFDA23D2BB230030F5BD /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C4EFFCA423D275FF00846010 /* VicAirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VicAirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EFFCA723D275FF00846010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4EFFCA923D275FF00846010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				C4EFFCD823D298F500846010 /* MapButton.swift */,
 				C4F52C1123D2B3E600284A4F /* VectorView.swift */,
+				C417DFDA23D2BB230030F5BD /* ProgressBar.swift */,
 			);
 			path = Fragments;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				C4EFFCC823D27D5000846010 /* SimpleAirMonitoringSite.swift in Sources */,
 				C4EFFCC923D27D5000846010 /* Coordinates.swift in Sources */,
 				C4EFFCC623D27D5000846010 /* Quality.swift in Sources */,
+				C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */,
 				C4EFFCD923D298F500846010 /* MapButton.swift in Sources */,
 				C4EFFCD423D2936400846010 /* MapView.swift in Sources */,
 				C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */,
