@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct SiteDetails: View {
-    @State var site: DetailedAirMonitoringSite
+    @Binding var site: DetailedAirMonitoringSite?
     
     var body: some View {
         VStack {
-            site.siteHealthAdvice.map { set in
+            site?.siteHealthAdvice.map { set in
                 ForEach(Array(set).sorted(by: { $0.healthParameter > $1.healthParameter}), id: \.self) { advice in
                     VectorView(vector: advice)
                 }
@@ -25,10 +25,10 @@ struct SiteDetails: View {
 
 struct SiteDetails_Previews: PreviewProvider {
     static var previews: some View {
-        SiteDetails(site: DetailedAirMonitoringSite(siteID: "test",
+        SiteDetails(site: .constant(DetailedAirMonitoringSite(siteID: "test",
                                                     siteName: "test",
                                                     siteType: "test",
                                                     siteLocation: Coordinates(latitude: 0.0, longitude: 0.0),
-                                                    siteHealthAdvice: Set<HealthVector>()))
+                                                    siteHealthAdvice: Set<HealthVector>())))
     }
 }

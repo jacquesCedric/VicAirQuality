@@ -22,15 +22,15 @@ struct SiteView: View {
                 Text("\(siteFetcher.currentSite?.siteName ?? "Site Data Unavailable")")
                     .font(.title)
                     .padding()
-                
+
                 Spacer()
-                
+
                 MapButton(pins: $pins, selectedPin: $selectedPin)
                     .padding()
             }
             
-            siteFetcher.currentSite.map{ SiteDetails(site: $0) }
-            
+            SiteDetails(site: $siteFetcher.currentSite)
+            .padding(EdgeInsets(top: -25, leading: 0, bottom: 0, trailing: 0))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
