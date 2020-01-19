@@ -21,7 +21,7 @@ extension HealthVector {
     /// - Parameter json: A fragment of json from an All Air Monitoring Sites request
     init?(simpleJson json: [String: Any]) {
         guard let averageValue = json["averageValue"] as? Double,
-            let healthParameter = json["healthParameter"] as? String,
+            var healthParameter = json["healthParameter"] as? String,
             var unit = json["unit"] as? String,
             let healthAdvice = json["healthAdvice"] as? String,
             let updatedDate = json["since"] as? String
@@ -36,6 +36,10 @@ extension HealthVector {
         if unit.contains("micro;g/m&sup3;") {
             unit = "µg/m³"
         }
+        
+        if healthParameter == "O3" { healthParameter = "O³" }
+        if healthParameter == "NO2" { healthParameter = "NO²" }
+        if healthParameter == "SO2" { healthParameter = "SO²" }
         
         self.averageValue = averageValue
         self.healthParameter = healthParameter
@@ -94,7 +98,7 @@ extension HealthVector {
 
 extension HealthVector: Hashable {
     static func == (lhs: HealthVector, rhs: HealthVector) -> Bool {
-        return lhs.healthParameter == rhs.healthParameter
+        return "\(lhs.healthParameter)\(lhs.averageValue)" == "\(rhs.healthParameter)\(rhs.averageValue)"
     }
     
     func hash(into hasher: inout Hasher) {
