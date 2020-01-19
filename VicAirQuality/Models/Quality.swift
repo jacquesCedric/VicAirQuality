@@ -74,6 +74,7 @@ extension Quality {
         }
     }
     
+    /// For assistance with progress bars
     func asProgress() -> Double {
         switch(grade) {
         case .unknown:
@@ -88,6 +89,24 @@ extension Quality {
             return 0.3
         case .hazardous:
             return 1.0
+        }
+    }
+    
+    /// For comparison with other qualities
+    func asAbsolute() -> Double {
+        switch(grade) {
+        case .unknown:
+            return 1.0
+        case .good:
+            return 0.8
+        case .moderate:
+            return 0.6
+        case .poor:
+            return 0.5
+        case .verypoor:
+            return 0.3
+        case .hazardous:
+            return 0.1
         }
     }
 }

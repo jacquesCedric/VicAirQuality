@@ -123,17 +123,13 @@ public class CurrentSiteFetcher: ObservableObject {
     
     /// Returns the vector with the worst graded quality at the current site.
     func worstQuality() -> Quality {
-        var q: Quality = Quality(string: "good")
+        var q: Quality = Quality(string: "unknown")
         
         _ = currentSite?.siteHealthAdvice.map { advice in
-            advice.map { vector in
-                if q.asProgress() > vector.healthAdvice.asProgress() {
+            advice.map { vector in                
+                if q.asAbsolute() > vector.healthAdvice.asAbsolute() {
                     q = vector.healthAdvice
                 }
-            }
-            
-            if advice.count == 0 {
-                q = Quality(string: "unknown")
             }
         }
         
