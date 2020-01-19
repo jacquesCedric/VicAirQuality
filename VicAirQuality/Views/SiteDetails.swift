@@ -13,9 +13,13 @@ struct SiteDetails: View {
     
     var body: some View {
         VStack {
-            Text("Details here")
+            site.siteHealthAdvice.map { set in
+                ForEach(Array(set).sorted(by: { $0.healthParameter > $1.healthParameter}), id: \.self) { advice in
+                    VectorView(vector: advice)
+                }
+            }
         }
-        .padding()
+        .padding([.leading, .trailing, .bottom])
     }
 }
 
