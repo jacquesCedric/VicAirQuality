@@ -18,6 +18,7 @@ extension UserDefaults {
 }
 
 
+// Easier manipulation of defaultSiteID
 extension UserDefaults {
     /// Default site is Alphington
     class var defaultSiteID: String {
@@ -37,6 +38,7 @@ extension UserDefaults {
 }
 
 
+// Easier manipulation of lastUpdate
 extension UserDefaults {
     class var lastUpdate: Double {
         let userDefaults = UserDefaults.standard
