@@ -60,17 +60,17 @@ extension Quality {
     func asColor() -> NSColor {
         switch(grade) {
         case .unknown:
-            return NSColor(calibratedRed: 179, green: 179, blue: 179, alpha: 1.0)
+            return NSColor(calibratedRed: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
         case .good:
-            return NSColor(calibratedRed: 100, green: 161, blue: 59, alpha: 1.0)
+            return NSColor(calibratedHue: 0.26, saturation: 0.58, brightness: 0.70, alpha: 1.0)
         case .moderate:
-            return NSColor(calibratedHue: 235, saturation: 197, brightness: 28, alpha: 1.0)
+            return NSColor(calibratedHue: 0.14, saturation: 0.83, brightness: 0.71, alpha: 1.0)
         case .poor:
-            return NSColor(calibratedHue: 214, saturation: 121, brightness: 0, alpha: 1.0)
+            return NSColor(calibratedHue: 0.09, saturation: 1.00, brightness: 0.52, alpha: 1.0)
         case .verypoor:
-            return NSColor(calibratedHue: 169, saturation: 7, brightness: 54, alpha: 1.0)
+            return NSColor(calibratedHue: 0.95, saturation: 0.92, brightness: 0.45, alpha: 1.0)
         case .hazardous:
-            return NSColor(calibratedHue: 80, saturation: 3, brightness: 30, alpha: 1.0)
+            return NSColor(calibratedHue: 0.94, saturation: 0.88, brightness: 0.27, alpha: 1.0)
         }
     }
     
@@ -81,13 +81,13 @@ extension Quality {
         case .good:
             return 1.0
         case .moderate:
-            return 0.75
+            return 0.65
         case .poor:
-            return 0.55
+            return 0.50
         case .verypoor:
-            return 0.4
+            return 0.3
         case .hazardous:
-            return 0.25
+            return 1.0
         }
     }
 }
