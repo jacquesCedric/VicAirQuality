@@ -29,11 +29,8 @@ struct SiteView: View {
                     .padding()
             }
             
-            Spacer()
-            
             siteFetcher.currentSite.map{ SiteDetails(site: $0) }
             
-            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {

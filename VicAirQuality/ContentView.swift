@@ -11,15 +11,6 @@ import SwiftUI
 struct ContentView: View {    
     var body: some View {
         VStack {
-//            Text("Hello, World!")
-//                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//
-//            Button(action: {
-//                AppDelegate.shared().changeMenuTitle(new: "🟢")
-//            }) {
-//                Text("switch")
-//            }
-            
             SiteView()
         }
     }
