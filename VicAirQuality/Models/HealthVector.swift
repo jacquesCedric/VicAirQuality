@@ -22,7 +22,7 @@ extension HealthVector {
     init?(simpleJson json: [String: Any]) {
         guard let averageValue = json["averageValue"] as? Double,
             let healthParameter = json["healthParameter"] as? String,
-            let unit = json["unit"] as? String,
+            var unit = json["unit"] as? String,
             let healthAdvice = json["healthAdvice"] as? String,
             let updatedDate = json["since"] as? String
         else {
@@ -32,6 +32,10 @@ extension HealthVector {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"
         let date = dateFormatter.date(from: updatedDate)
+        
+        if unit.contains("micro;g/m&sup3;") {
+            unit = "µg/m³"
+        }
         
         self.averageValue = averageValue
         self.healthParameter = healthParameter
