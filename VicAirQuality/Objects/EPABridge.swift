@@ -10,6 +10,8 @@ import Foundation
 
 fileprivate let VICEPAkey = "ec641868165e4831882fde970538726f"
 
+/// Adds headers as suggested by the VIC EPA API.
+/// - Parameter request: An URL request for gateway.api.epa.vic.gov.au
 fileprivate func addNecessaryHeaders(request: URLRequest) -> URLRequest {
     var withHeaders = request
     
@@ -68,6 +70,7 @@ public class CurrentSiteFetcher: ObservableObject {
         }
     }
     
+    /// Check if an update is necessary
     func checkForUpdate() {
         if (localCurrentID != UserDefaults.defaultSiteID) {
             fetchCurrentSite()
@@ -85,9 +88,11 @@ public class CurrentSiteFetcher: ObservableObject {
         }
     }
     
+    /// Using information from userdefaults, fetch and parse more recent json for the current site
     func fetchCurrentSite() {
         UserDefaults.set(lastUpdate: Date().timeIntervalSince1970)
         lastLocalUpdate = UserDefaults.lastUpdate
+        localCurrentID = UserDefaults.defaultSiteID
         
         let currentID = UserDefaults.defaultSiteID
         
@@ -108,8 +113,30 @@ public class CurrentSiteFetcher: ObservableObject {
                 
                 DispatchQueue.main.async {
                     self.currentSite = richStation
+                    
+                    AppDelegate.shared().changeMenuTitle(new: self.worstQuality().asIcon())
                 }
             }
         }.resume()
+    }
+    
+    
+    /// Returns the vector with the worst graded quality at the current site.
+    func worstQuality() -> Quality {
+        var q: Quality = Quality(string: "good")
+        
+        _ = currentSite?.siteHealthAdvice.map { advice in
+            advice.map { vector in
+                if q.asProgress() > vector.healthAdvice.asProgress() {
+                    q = vector.healthAdvice
+                }
+            }
+            
+            if advice.count == 0 {
+                q = Quality(string: "unknown")
+            }
+        }
+        
+        return q
     }
 }
