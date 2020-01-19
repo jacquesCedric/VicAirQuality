@@ -31,6 +31,8 @@ struct SiteView: View {
             
             SiteDetails(site: $siteFetcher.currentSite)
             .padding(EdgeInsets(top: -25, leading: 0, bottom: 0, trailing: 0))
+            
+            LastUpdated(date: $siteFetcher.lastLocalUpdate)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {

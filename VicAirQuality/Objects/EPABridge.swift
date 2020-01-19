@@ -55,9 +55,9 @@ final class EPABridge {
 }
 
 public class CurrentSiteFetcher: ObservableObject {
-    @Published var currentSite: DetailedAirMonitoringSite?
+    @Published var currentSite: DetailedAirMonitoringSite?    
+    @Published var lastLocalUpdate: Double = UserDefaults.lastUpdate
     
-    var lastLocalUpdate: Double = UserDefaults.lastUpdate
     var localCurrentID: String = UserDefaults.defaultSiteID
     
     var timer = Timer()
