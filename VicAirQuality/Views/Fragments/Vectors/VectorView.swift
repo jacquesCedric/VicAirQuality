@@ -36,7 +36,6 @@ struct VectorView: View {
                         backgroundColor: Color.gray.opacity(0.5),
                         foregroundColor: Color.init(vector.healthAdvice.asColor()))
                 .frame(maxWidth: 200.0, maxHeight: 10.0)
-//                .padding([.leading, .trailing])
             
             HStack(alignment: .bottom, spacing: 2) {
                 Spacer()

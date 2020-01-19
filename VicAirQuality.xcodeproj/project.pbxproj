@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40BC5DE23D5228D00D9409C /* Date+ShortLocalDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */; };
 		C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417DFDA23D2BB230030F5BD /* ProgressBar.swift */; };
+		C420792523D51DD400BA1B00 /* LastUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420792423D51DD400BA1B00 /* LastUpdated.swift */; };
 		C4EFFCA823D275FF00846010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCA723D275FF00846010 /* AppDelegate.swift */; };
 		C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCA923D275FF00846010 /* ContentView.swift */; };
 		C4EFFCAC23D2760300846010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EFFCAB23D2760300846010 /* Assets.xcassets */; };
@@ -31,7 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ShortLocalDescription.swift"; sourceTree = "<group>"; };
 		C417DFDA23D2BB230030F5BD /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		C420792423D51DD400BA1B00 /* LastUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdated.swift; sourceTree = "<group>"; };
 		C4EFFCA423D275FF00846010 /* VicAirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VicAirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EFFCA723D275FF00846010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4EFFCA923D275FF00846010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C420792623D51DF600BA1B00 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFFCD323D2936400846010 /* MapView.swift */,
+				C4EFFCD823D298F500846010 /* MapButton.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		C420792723D51E1000BA1B00 /* Vectors */ = {
+			isa = PBXGroup;
+			children = (
+				C4F52C1123D2B3E600284A4F /* VectorView.swift */,
+			);
+			path = Vectors;
+			sourceTree = "<group>";
+		};
+		C420792823D51E2800BA1B00 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C417DFDA23D2BB230030F5BD /* ProgressBar.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		C4EFFC9B23D275FF00846010 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +116,7 @@
 		C4EFFCA623D275FF00846010 /* VicAirQuality */ = {
 			isa = PBXGroup;
 			children = (
-				C4EFFCD523D2957200846010 /* Shared */,
+				C4EFFCD523D2957200846010 /* Extensions */,
 				C4EFFCCC23D27D7600846010 /* Objects */,
 				C4EFFCBB23D276D600846010 /* Views */,
 				C4EFFCBA23D276CD00846010 /* Models */,
@@ -129,7 +158,6 @@
 			children = (
 				C4EFFCDC23D2A38800846010 /* Fragments */,
 				C4EFFCD623D2958B00846010 /* SiteView.swift */,
-				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,21 +171,23 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		C4EFFCD523D2957200846010 /* Shared */ = {
+		C4EFFCD523D2957200846010 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C4EFFCD123D28DE600846010 /* UserDefaults+Settings.swift */,
+				C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */,
 			);
-			path = Shared;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C4EFFCDC23D2A38800846010 /* Fragments */ = {
 			isa = PBXGroup;
 			children = (
-				C4EFFCD323D2936400846010 /* MapView.swift */,
-				C4EFFCD823D298F500846010 /* MapButton.swift */,
-				C4F52C1123D2B3E600284A4F /* VectorView.swift */,
-				C417DFDA23D2BB230030F5BD /* ProgressBar.swift */,
+				C420792423D51DD400BA1B00 /* LastUpdated.swift */,
+				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
+				C420792823D51E2800BA1B00 /* Shared */,
+				C420792723D51E1000BA1B00 /* Vectors */,
+				C420792623D51DF600BA1B00 /* Maps */,
 			);
 			path = Fragments;
 			sourceTree = "<group>";
@@ -240,6 +270,7 @@
 				C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */,
 				C4EFFCD923D298F500846010 /* MapButton.swift in Sources */,
 				C4EFFCD423D2936400846010 /* MapView.swift in Sources */,
+				C420792523D51DD400BA1B00 /* LastUpdated.swift in Sources */,
 				C4EFFCAA23D275FF00846010 /* ContentView.swift in Sources */,
 				C4EFFCDB23D2A37000846010 /* SiteDetails.swift in Sources */,
 				C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */,
@@ -250,6 +281,7 @@
 				C4EFFCD023D27DF100846010 /* EPABridge.swift in Sources */,
 				C4EFFCCB23D27D5000846010 /* HealthVector.swift in Sources */,
 				C4EFFCA823D275FF00846010 /* AppDelegate.swift in Sources */,
+				C40BC5DE23D5228D00D9409C /* Date+ShortLocalDescription.swift in Sources */,
 				C4EFFCC723D27D5000846010 /* DetailedAirMonitoringSite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
