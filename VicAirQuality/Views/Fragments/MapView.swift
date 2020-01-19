@@ -16,8 +16,8 @@ struct MapView: NSViewRepresentable {
     
     // State of Victoria
     let region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -37.4713, longitude: 145.7852),
-                                                        latitudinalMeters: CLLocationDistance(exactly: 1000000.0)!,
-                                                        longitudinalMeters: CLLocationDistance(exactly: 347190.0)!)
+                                                        latitudinalMeters: CLLocationDistance(exactly: 580000.0)!,
+                                                        longitudinalMeters: CLLocationDistance(exactly: 267190.0)!)
     
     func makeNSView(context: Context) -> MKMapView {
         let view = MKMapView(frame: .zero)

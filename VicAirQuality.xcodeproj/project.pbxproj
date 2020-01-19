@@ -128,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				C4EFFCDC23D2A38800846010 /* Fragments */,
-				C4EFFCD323D2936400846010 /* MapView.swift */,
 				C4EFFCD623D2958B00846010 /* SiteView.swift */,
 				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
 			);
@@ -155,6 +154,7 @@
 		C4EFFCDC23D2A38800846010 /* Fragments */ = {
 			isa = PBXGroup;
 			children = (
+				C4EFFCD323D2936400846010 /* MapView.swift */,
 				C4EFFCD823D298F500846010 /* MapButton.swift */,
 				C4F52C1123D2B3E600284A4F /* VectorView.swift */,
 				C417DFDA23D2BB230030F5BD /* ProgressBar.swift */,
