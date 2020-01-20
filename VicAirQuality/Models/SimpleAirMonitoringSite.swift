@@ -48,24 +48,16 @@ extension SimpleAirMonitoringSite {
 
 
 extension SimpleAirMonitoringSite {
-    /// MKPointAnnotation representation of a site.
-    /// - siteName map to title
-    /// - siteID map to  subtitle
+    /// MapPin representation of a site.
+    /// - siteName maps to title
+    /// - health advice description maps to  subtitle
     /// - coordinates map directly
-    func asMKPointAnnotation() -> MKPointAnnotation {
-        let annotation = MKPointAnnotation()
-        annotation.title = self.siteName
-        annotation.subtitle = self.siteID
-        annotation.coordinate = CLLocationCoordinate2D(latitude: self.siteLocation.latitude, longitude: self.siteLocation.longitude)
-        return annotation
-    }
-    
-    
     func asMapPin() -> MapPin {
         let pin = MapPin(coordinate: CLLocationCoordinate2D(latitude: self.siteLocation.latitude, longitude: self.siteLocation.longitude),
                          title: self.siteName,
                          subtitle: self.siteHealthAdvice?.healthAdvice.description,
                          siteID: self.siteID,
+                         color: self.siteHealthAdvice?.healthAdvice.asColor() ?? NSColor.gray,
                          action: nil)
         
         return pin

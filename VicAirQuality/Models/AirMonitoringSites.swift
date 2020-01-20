@@ -32,10 +32,6 @@ extension AirMonitoringSites {
 }
 
 extension AirMonitoringSites {
-    func allLocationsAsMKPointAnnotations() -> [MKPointAnnotation] {
-        return self.sites.map{ $0.asMKPointAnnotation() }
-    }
-    
     func allLocationsAsMapPins() -> [MapPin] {
         return self.sites.map{ $0.asMapPin() }
     }

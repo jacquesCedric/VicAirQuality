@@ -14,17 +14,20 @@ class MapPin: NSObject, MKAnnotation {
     let title: String?
     let subtitle: String?
     let siteID: String
+    let color: NSColor
     let action: (() -> Void)?
 
     init(coordinate: CLLocationCoordinate2D,
          title: String? = nil,
          subtitle: String? = nil,
          siteID: String,
+         color: NSColor,
          action: (() -> Void)? = nil) {
         self.coordinate = coordinate
         self.title = title
         self.subtitle = subtitle
         self.siteID = siteID
+        self.color = color
         self.action = action
     }
 }
