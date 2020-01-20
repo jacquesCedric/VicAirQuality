@@ -43,7 +43,9 @@ struct ProgressBar: View {
                 Capsule()
                     .frame(width: self.progress(value: self.value,
                                                 maxValue: self.maxValue,
-                                                width: geometryReader.size.width))
+                                                width: geometryReader.size.width) - 2,
+                           height: geometryReader.size.height - 2)
+                    .padding(EdgeInsets(top: 1, leading: 1, bottom: 0, trailing: 0))
                     .foregroundColor(self.foregroundColor)
                     .animation(.easeIn)
             }
