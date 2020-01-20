@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MapButton: View {
+    @State var hovered: Bool = false
     @State var showMap: Bool = false
     @Binding var pins: [MapPin]
     @Binding var selectedPin: MapPin?
@@ -22,7 +23,7 @@ struct MapButton: View {
                 Image(nsImage: NSImage(named: NSImage.touchBarExitFullScreenTemplateName)!)
                     .rotationEffect(Angle(degrees: 90.0))
             }
-            .scaleEffect(0.85)
+            .scaleEffect(self.hovered ? 0.75 : 0.85)
         }
         .buttonStyle(PlainButtonStyle())
         .frame(width: 30, height: 30)
@@ -37,6 +38,11 @@ struct MapButton: View {
             .edgesIgnoringSafeArea(.all)
             .padding()
             .frame( minWidth: 400, minHeight: 400)
+        }
+        .onHover {_ in
+            withAnimation {
+                self.hovered.toggle()
+            }
         }
         
     }
