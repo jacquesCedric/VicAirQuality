@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct VectorView: View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     @State var vector: HealthVector
     
     var body: some View {
@@ -22,11 +24,14 @@ struct VectorView: View {
                         .bold()
 
                     Text(vector.healthAdvice.description)
-                        .opacity(0.8)
-                        .foregroundColor(Color.init(vector.healthAdvice.asColor()))
+                        .padding(EdgeInsets(top: 1, leading: 4, bottom: 1, trailing: 4))
+                        .background(Color.init(vector.healthAdvice.asColor()))
+                        .foregroundColor(colorScheme == .light ? Color.black : Color.white)
+                        .cornerRadius(4)
+                        .font(.system(size: 11.5))
                 }
                 Spacer()
-            }.frame(width: 75)
+            }.frame(width: 82)
             
             
             
@@ -53,6 +58,10 @@ struct VectorView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             VectorView(vector: HealthVector(averageValue: 0.18, healthParameter: "CO2", unit: "mm/pg", healthAdvice: Quality(string: "moderate"), updatedDate: Date()))
+            VectorView(vector: HealthVector(averageValue: 0.18, healthParameter: "CO2", unit: "mm/pg", healthAdvice: Quality(string: "hazardous"), updatedDate: Date()))
+            VectorView(vector: HealthVector(averageValue: 0.18, healthParameter: "CO2", unit: "mm/pg", healthAdvice: Quality(string: "good"), updatedDate: Date()))
+            VectorView(vector: HealthVector(averageValue: 0.18, healthParameter: "CO2", unit: "mm/pg", healthAdvice: Quality(string: "poor"), updatedDate: Date()))
+            VectorView(vector: HealthVector(averageValue: 0.18, healthParameter: "CO2", unit: "mm/pg", healthAdvice: Quality(string: "verypoor"), updatedDate: Date()))
         }
         .frame(maxWidth: 380)
     }
