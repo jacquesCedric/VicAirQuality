@@ -41,7 +41,6 @@ struct SiteView: View {
                 QuitButton()
                     .padding([.trailing, .bottom])
             }
-            .padding(EdgeInsets(top: -25, leading: 0, bottom: 0, trailing: 0))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {

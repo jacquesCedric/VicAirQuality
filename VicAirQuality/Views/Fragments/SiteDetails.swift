@@ -19,7 +19,7 @@ struct SiteDetails: View {
                 }
             }
         }
-        .padding([.leading, .trailing, .bottom])
+        .padding()
     }
 }
 

@@ -43,8 +43,9 @@ struct VectorView: View {
                 Text(vector.unit)
                     .font(.system(size: 9))
             }.frame(width: 75)
-            
-        }.padding()
+        }
+        .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
+        .padding([.leading])
     }
 }
 
