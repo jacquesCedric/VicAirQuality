@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C40BC5DE23D5228D00D9409C /* Date+ShortLocalDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */; };
+		C40BC5E023D525B400D9409C /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BC5DF23D525B400D9409C /* QuitButton.swift */; };
 		C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417DFDA23D2BB230030F5BD /* ProgressBar.swift */; };
 		C420792523D51DD400BA1B00 /* LastUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420792423D51DD400BA1B00 /* LastUpdated.swift */; };
 		C4EFFCA823D275FF00846010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCA723D275FF00846010 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ShortLocalDescription.swift"; sourceTree = "<group>"; };
+		C40BC5DF23D525B400D9409C /* QuitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
 		C417DFDA23D2BB230030F5BD /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C420792423D51DD400BA1B00 /* LastUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdated.swift; sourceTree = "<group>"; };
 		C4EFFCA423D275FF00846010 /* VicAirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VicAirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 			children = (
 				C420792423D51DD400BA1B00 /* LastUpdated.swift */,
 				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
+				C40BC5DF23D525B400D9409C /* QuitButton.swift */,
 				C420792823D51E2800BA1B00 /* Shared */,
 				C420792723D51E1000BA1B00 /* Vectors */,
 				C420792623D51DF600BA1B00 /* Maps */,
@@ -276,6 +279,7 @@
 				C4EFFCD223D28DE600846010 /* UserDefaults+Settings.swift in Sources */,
 				C4EFFCCA23D27D5000846010 /* AirMonitoringSites.swift in Sources */,
 				C4EFFCCE23D27D8800846010 /* MapPin.swift in Sources */,
+				C40BC5E023D525B400D9409C /* QuitButton.swift in Sources */,
 				C4EFFCD723D2958B00846010 /* SiteView.swift in Sources */,
 				C4F52C1223D2B3E600284A4F /* VectorView.swift in Sources */,
 				C4EFFCD023D27DF100846010 /* EPABridge.swift in Sources */,

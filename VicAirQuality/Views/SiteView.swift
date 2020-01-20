@@ -19,20 +19,29 @@ struct SiteView: View {
     var body: some View {
         VStack {
             HStack {
+                MapButton(pins: $pins, selectedPin: $selectedPin)
+                    .padding([.leading, .bottom, .top])
+                
                 Text("\(siteFetcher.currentSite?.siteName ?? "Site Data Unavailable")")
                     .font(.title)
-                    .padding()
-
+                    .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 0))
+                    .padding([.trailing, .bottom, .top])
+                
                 Spacer()
-
-                MapButton(pins: $pins, selectedPin: $selectedPin)
-                    .padding()
             }
             
             SiteDetails(site: $siteFetcher.currentSite)
-            .padding(EdgeInsets(top: -25, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: -25, leading: 0, bottom: 0, trailing: 0))
             
-            LastUpdated(date: $siteFetcher.lastLocalUpdate)
+            Spacer()
+            
+            HStack {
+                LastUpdated(date: $siteFetcher.lastLocalUpdate)
+                Spacer()
+                QuitButton()
+                    .padding([.trailing, .bottom])
+            }
+            .padding(EdgeInsets(top: -25, leading: 0, bottom: 0, trailing: 0))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
