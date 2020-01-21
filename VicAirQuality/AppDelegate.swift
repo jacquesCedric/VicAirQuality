@@ -51,7 +51,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
            } else {
                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
                self.popover.contentViewController?.view.window?.becomeKey()
-               NSApp.activate(ignoringOtherApps: true)
            }
        }
     }
