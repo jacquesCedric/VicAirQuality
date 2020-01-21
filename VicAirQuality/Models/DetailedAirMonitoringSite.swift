@@ -15,6 +15,20 @@ struct DetailedAirMonitoringSite: MonitoringSite {
     
     let siteLocation: Coordinates
     let siteHealthAdvice: Set<HealthVector>?
+    
+    func worstQuality() -> Quality {
+        var q: Quality = Quality(string: "unknown")
+        
+        _ = self.siteHealthAdvice.map { advice in
+            advice.map { vector in
+                if q.asAbsolute() > vector.healthAdvice.asAbsolute() {
+                    q = vector.healthAdvice
+                }
+            }
+        }
+        
+        return q
+    }
 }
 
 extension DetailedAirMonitoringSite {

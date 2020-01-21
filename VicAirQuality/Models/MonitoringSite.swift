@@ -14,4 +14,6 @@ protocol MonitoringSite: Hashable {
     var siteType: String { get }
     
     var siteLocation: Coordinates { get }
+    
+    func worstQuality() -> Quality
 }

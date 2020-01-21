@@ -16,6 +16,10 @@ struct SimpleAirMonitoringSite: MonitoringSite {
     
     let siteLocation: Coordinates
     let siteHealthAdvice: HealthVector?
+    
+    func worstQuality() -> Quality {
+        return self.siteHealthAdvice?.healthAdvice ?? Quality(degree: .unknown)
+    }
 }
 
 extension SimpleAirMonitoringSite {
@@ -57,7 +61,7 @@ extension SimpleAirMonitoringSite {
                          title: self.siteName,
                          subtitle: self.siteHealthAdvice?.healthAdvice.description,
                          siteID: self.siteID,
-                         color: self.siteHealthAdvice?.healthAdvice.asColor() ?? NSColor.gray,
+                         color: self.worstQuality().asColor(),
                          action: nil)
         
         return pin

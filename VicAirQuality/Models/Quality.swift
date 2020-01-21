@@ -19,6 +19,10 @@ struct Quality {
         let formatted = string.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         self.grade = degree(rawValue: formatted) ?? .unknown
     }
+    
+    init(degree: degree) {
+        self.grade = degree
+    }
 }
 
 

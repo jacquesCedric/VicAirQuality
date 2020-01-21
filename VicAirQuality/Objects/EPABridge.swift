@@ -114,25 +114,9 @@ public class CurrentSiteFetcher: ObservableObject {
                 DispatchQueue.main.async {
                     self.currentSite = richStation
                     
-                    AppDelegate.shared().changeMenuTitle(new: self.worstQuality().asIcon())
+                    AppDelegate.shared().changeMenuTitle(new: richStation.worstQuality().asIcon())
                 }
             }
         }.resume()
-    }
-    
-    
-    /// Returns the vector with the worst graded quality at the current site.
-    func worstQuality() -> Quality {
-        var q: Quality = Quality(string: "unknown")
-        
-        _ = currentSite?.siteHealthAdvice.map { advice in
-            advice.map { vector in                
-                if q.asAbsolute() > vector.healthAdvice.asAbsolute() {
-                    q = vector.healthAdvice
-                }
-            }
-        }
-        
-        return q
     }
 }

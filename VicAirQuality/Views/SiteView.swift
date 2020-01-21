@@ -21,6 +21,11 @@ struct SiteView: View {
             HStack {
                 MapButton(pins: $pins, selectedPin: $selectedPin)
                     .padding([.leading, .bottom, .top])
+                    .onTapGesture {
+                        self.allSites.fetchAllMonitoringSites() { sites in
+                            self.pins = sites.allLocationsAsMapPins()
+                        }
+                }
                 
                 Text("\(siteFetcher.currentSite?.siteName ?? "Site Data Unavailable")")
                     .font(.title)
