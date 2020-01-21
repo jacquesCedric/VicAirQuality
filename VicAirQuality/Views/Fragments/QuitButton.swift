@@ -32,6 +32,7 @@ struct QuitButton: View {
                 self.hovered.toggle()
             }
         }
+        .accessibility(hint: Text("Quit application"))
     }
 }
 

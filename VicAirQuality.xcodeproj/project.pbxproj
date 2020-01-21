@@ -158,8 +158,8 @@
 		C4EFFCBB23D276D600846010 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C4EFFCDC23D2A38800846010 /* Fragments */,
 				C4EFFCD623D2958B00846010 /* SiteView.swift */,
+				C4EFFCDC23D2A38800846010 /* Fragments */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,8 +185,8 @@
 		C4EFFCDC23D2A38800846010 /* Fragments */ = {
 			isa = PBXGroup;
 			children = (
-				C420792423D51DD400BA1B00 /* LastUpdated.swift */,
 				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
+				C420792423D51DD400BA1B00 /* LastUpdated.swift */,
 				C40BC5DF23D525B400D9409C /* QuitButton.swift */,
 				C420792823D51E2800BA1B00 /* Shared */,
 				C420792723D51E1000BA1B00 /* Vectors */,

@@ -38,13 +38,17 @@ struct MapButton: View {
             .edgesIgnoringSafeArea(.all)
             .padding()
             .frame( minWidth: 400, minHeight: 400)
+            .accessibilityAction(named: Text("Return to Site Overview")) {
+                self.showMap = false
+            }
         }
         .onHover {_ in
             withAnimation {
                 self.hovered.toggle()
             }
         }
-        
+        .accessibility(label: Text("Select Site"))
+        .accessibility(hint: Text("Opens a map view to select what site to show detailed information about"))
     }
 }
 
