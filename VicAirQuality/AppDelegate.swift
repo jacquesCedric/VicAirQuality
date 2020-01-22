@@ -47,10 +47,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func togglePopover(_ sender: AnyObject?) {
        if let button = self.statusBarItem.button {
            if self.popover.isShown {
-               self.popover.performClose(sender)
+                self.popover.performClose(sender)
            } else {
-               self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-               self.popover.contentViewController?.view.window?.becomeKey()
+                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+                self.popover.contentViewController?.view.window?.becomeKey()
+                NSApp.activate(ignoringOtherApps: true)
            }
        }
     }

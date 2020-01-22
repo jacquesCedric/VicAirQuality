@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C40BC5DE23D5228D00D9409C /* Date+ShortLocalDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */; };
 		C40BC5E023D525B400D9409C /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BC5DF23D525B400D9409C /* QuitButton.swift */; };
+		C40BC5E223D8191900D9409C /* MoreInformationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BC5E123D8191900D9409C /* MoreInformationButton.swift */; };
 		C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417DFDA23D2BB230030F5BD /* ProgressBar.swift */; };
 		C420792523D51DD400BA1B00 /* LastUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420792423D51DD400BA1B00 /* LastUpdated.swift */; };
 		C4EFFCA823D275FF00846010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFFCA723D275FF00846010 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		C40BC5DD23D5228D00D9409C /* Date+ShortLocalDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ShortLocalDescription.swift"; sourceTree = "<group>"; };
 		C40BC5DF23D525B400D9409C /* QuitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
+		C40BC5E123D8191900D9409C /* MoreInformationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationButton.swift; sourceTree = "<group>"; };
 		C417DFDA23D2BB230030F5BD /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C420792423D51DD400BA1B00 /* LastUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdated.swift; sourceTree = "<group>"; };
 		C4EFFCA423D275FF00846010 /* VicAirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VicAirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 				C4EFFCDA23D2A37000846010 /* SiteDetails.swift */,
 				C420792423D51DD400BA1B00 /* LastUpdated.swift */,
 				C40BC5DF23D525B400D9409C /* QuitButton.swift */,
+				C40BC5E123D8191900D9409C /* MoreInformationButton.swift */,
 				C420792823D51E2800BA1B00 /* Shared */,
 				C420792723D51E1000BA1B00 /* Vectors */,
 				C420792623D51DF600BA1B00 /* Maps */,
@@ -271,6 +274,7 @@
 				C4EFFCC923D27D5000846010 /* Coordinates.swift in Sources */,
 				C4EFFCC623D27D5000846010 /* Quality.swift in Sources */,
 				C417DFDB23D2BB230030F5BD /* ProgressBar.swift in Sources */,
+				C40BC5E223D8191900D9409C /* MoreInformationButton.swift in Sources */,
 				C4EFFCD923D298F500846010 /* MapButton.swift in Sources */,
 				C4EFFCD423D2936400846010 /* MapView.swift in Sources */,
 				C420792523D51DD400BA1B00 /* LastUpdated.swift in Sources */,
