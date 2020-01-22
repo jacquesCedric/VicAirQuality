@@ -5,7 +5,7 @@
 
 A menubar applet that accesses updating air quality information from the Victorian EPA. Presenting both an overview of air quality across the state and detailed information about a particular air quality monitoring site.
 
-<img src="readme-media/inaction.png" align="center">
+<img src="readme-media/map.png" align="center">
 
 ## Installation
 Just grab the latest release from the releases tab, or build from source following the instructions below.
@@ -13,7 +13,7 @@ Just grab the latest release from the releases tab, or build from source followi
 ## Use
 VicAirQuality lives in the menubar. When clicked, a pop-up is presented showing detailed information of a particular air quality monitoring site. Clicking the blue crosshair button beside the name of the site presents a map pop-up with an overview of other available air quality monitoring sites. Selecting one of these sites will update the detailed information to that site. Sites in the map pop-up are colour-coded depending on their lowest performing quality. The detailed view adheres to this too, but shows a breakdown of how each quality rates.
 
-<img src="readme-media/map.png" align="center">
+<img src="readme-media/inaction.png" align="center" width="70%">
 
 ## Notes
 ### Quality Categories
